@@ -4,15 +4,13 @@ import ReactDOM from "react-dom";
 import "bootstrap";
 import "../styles/index.scss";
 
-// por que el contador cuenta 10 segundos??
-
 function SimpleCounter() {
 	const [counter, setCounter] = useState(0);
 	useEffect(function() {
 		const intervalId = setInterval(function() {
 			setCounter(counter => counter + 1);
 			console.log(counter);
-		}, 1000); //1000 es un segundo
+		}, 1000);
 		return function() {
 			clearInterval(intervalId);
 		};
