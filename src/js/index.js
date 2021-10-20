@@ -10,7 +10,7 @@ function SimpleCounter() {
 		const intervalId = setInterval(function() {
 			setCounter(counter => counter + 1);
 			console.log(counter);
-		}, 1000);
+		}, 100);
 		return function() {
 			clearInterval(intervalId);
 		};
@@ -20,10 +20,10 @@ function SimpleCounter() {
 			<div className="clock">
 				<i className="fas fa-clock"></i>
 			</div>
-			<div className="four">{Math.floor(counter / 10000) % 10}</div>
-			<div className="three">{Math.floor(counter / 1000) % 10}</div>
-			<div className="two">{Math.floor(counter / 100) % 10}</div>
-			<div className="one">{Math.floor(counter / 10) % 10}</div>
+			<div className="four">{Math.floor(counter / 1000) % 10}</div>
+			<div className="three">{Math.floor(counter / 100) % 10}</div>
+			<div className="two">{Math.floor(counter / 10) % 10}</div>
+			<div className="one">{Math.floor(counter / 1) % 10}</div>
 		</div>
 	);
 }
