@@ -17,7 +17,9 @@ function SimpleCounter() {
 	}, []);
 	return (
 		<div className="bigCounter">
-			<div className="clock">I</div>
+			<div className="clock">
+				<i className="fas fa-clock"></i>
+			</div>
 			<div className="four">{Math.floor(counter / 10000) % 10}</div>
 			<div className="three">{Math.floor(counter / 1000) % 10}</div>
 			<div className="two">{Math.floor(counter / 100) % 10}</div>
